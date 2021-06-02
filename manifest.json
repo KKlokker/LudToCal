@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "LudToCal",
+  "description": "Ludus To Calendar",
+  "version": "1.7",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAks0kN0SQPir/wbHHgfsXyw+SGlevJF7SMFBafy847iG20+CK4zapM0OkoDeyGAfmhcT6ARYNIZu0ka+Sp4RXFRhHIkUId+feQQmIvt2cumlE/MX8nCwgCaYJQ/rH7Bt3bA3evT8g2GFvJZg9Ur4/tw526GXo4sLHstBHYaDQ4HaDcmo8uIvEMMgn1DProEWcPi4WN9fj8Nf9lXbdAX8YHcOulWTUq+DEOGuc8vdJTBPYFXVYw4oTLUUfgLiwAf3IALJKKShun7GX10Fv72zH7BkWPbs9POxE+z3HnI6isO2C0Px9LeW0mU8p+yiosw2uSkh6+VDfsaYD7aI9AnqfbwIDAQAB",
+  "permissions": [
+    "identity",
+    "storage",
+    "https://ludus.sde.dk/ui/main"
+  ],
+  "oauth2": {
+    "client_id": "492394723770-bn1qevu2ikv5c0q91hfid1ns9i5thb5b.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar"
+    ]
+  },
+  "content_security_policy": "script-src 'self' https://calendar.google.com; object-src 'self'",
+  "background": {
+    "scripts": [
+      "lib/jstz-1.0.4.min.js",
+      "lib/jquery.min.js",
+      "lib/moment+langs.min.js",
+      "background.js",
+      "utils.js",
+      "feeds.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "LudToCal",
+    "default_popup": "browser_action.html"
+  },
+  "icons": {"48": "LudToCalLogo.png"}
+}
